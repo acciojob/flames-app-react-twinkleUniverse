@@ -46,7 +46,7 @@ const App = ()=> {
           for (let char in s2) {
             len2+=s2[char];
           }
-          console.log((len1+len2)%6);
+          //console.log((len1+len2)%6);
           getRelation((len1+len2)%6);
        }
 
@@ -84,10 +84,10 @@ const App = ()=> {
 
         return(
             <div id="main">
-                <input id="input1" type="text" placeholder="First Name" onChange={handleEvent1} value={str1}/>
-                <input id="input2" type="text" placeholder="Second Name" onChange={handleEvent2} value={str2}/>
-                <button id="calculate_relationship" onClick={calculate}>Calculate Relationship Future</button>
-                <button id="clear" onClick={clear} >Clear</button>
+                <input data-testid="input1" type="text" name="firstname" placeholder="First Name" onChange={handleEvent1} value={str1}/>
+                <input data-testid="input2" type="text" name="secondname" placeholder="Second Name" onChange={handleEvent2} value={str2}/>
+                <button data-testid="calculate_relationship" onClick={calculate}>Calculate Relationship Future</button>
+                <button data-testid="clear" onClick={clear} >Clear</button>
                 <h3 id="answer">{ans}</h3>
             </div>
         )

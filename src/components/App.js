@@ -84,11 +84,11 @@ const App = ()=> {
 
         return(
             <div id="main">
-                <input data-testid="input1" type="text" name="firstname" placeholder="First Name" onChange={handleEvent1} value={str1}/>
-                <input data-testid="input2" type="text" name="secondname" placeholder="Second Name" onChange={handleEvent2} value={str2}/>
+                <input data-testid="input1" type="text" name="name1" placeholder="First Name" onChange={handleEvent1} value={str1}/>
+                <input data-testid="input2" type="text" name="name2" placeholder="Second Name" onChange={handleEvent2} value={str2}/>
                 <button data-testid="calculate_relationship" onClick={calculate}>Calculate Relationship Future</button>
                 <button data-testid="clear" onClick={clear} >Clear</button>
-                <h3 id="answer">{ans}</h3>
+                <h3 data-testid="answer">{ans}</h3>
             </div>
         )
     
